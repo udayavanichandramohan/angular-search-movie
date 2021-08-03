@@ -22,9 +22,14 @@
     </table>
   </div>
 </div>
-<div class="more-details" *ngIf="(showMoreDetails | json) != '{}'">
+<div class="more-details-container" *ngIf="(showMoreDetails | json) != '{}'">
+  <div class='more-details-name'>
   {{showMoreDetails.Film}}
+  </div>
   <div *ngFor="let prop of key">
-  <div>{{prop}}: {{showMoreDetails[prop]}}</div>
+  <div>
+    <span class='movie-key'>{{prop}}: </span>
+    <span class='movie-value'>{{showMoreDetails[prop]}}</span>
+  </div>
 </div> 
 </div>

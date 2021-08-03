@@ -18,7 +18,20 @@
 .form-control::placeholder  {
   font-family: FontAwesome;
 }
-.more-details {
+.more-details-container {
   border:1px solid black;
   margin:20px;
+}
+.more-details-name{
+ margin-bottom:10px;
+ font-size: 20px;
+
+}
+.movie-key {
+  color: #BEBEBE;
+
+}
+
+.movie-value {
+
 }
