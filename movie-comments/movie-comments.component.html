@@ -1,0 +1,30 @@
+<div class="movie-comments">
+<div class="comments">
+  <div class='comments-label'>
+    Comments
+  </div>
+
+  <ng-container *ngFor="let comment of comments">
+    <div>
+      <span class='comment-name'>{{comment.name}}: </span>
+      <span class='comment-value'>{{comment.comment}}</span>
+    </div>
+  </ng-container>
+</div>
+
+<form #ctrl='ngForm' (submit)='submitForm(ctrl)'>
+  <div>
+    <input ngModel
+           name='comment'
+           class="form-control"
+           placeholder="Your comments">
+  </div>
+  <div>
+    <input ngModel
+           name='name'
+           class="form-control input-name"
+           placeholder="Your name">
+  </div>
+  <input type='submit' class="submit-btn">
+</form>
+</div>

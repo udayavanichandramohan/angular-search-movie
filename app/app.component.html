@@ -22,34 +22,8 @@
     </table>
   </div>
 </div>
-<div class="more-details-container" *ngIf="(showMoreDetails | json) != '{}'">
-  <div class='more-details-name'>
-  {{showMoreDetails.Film}}
-  </div>
-  <div *ngFor="let prop of key">
-  <div>
-    <span class='movie-key'>{{prop}}: </span>
-    <span class='movie-value'>{{showMoreDetails[prop]}}</span>
-  </div>
-</div> 
-
-<div class="comments" >
-  Comments
-<ng-container *ngFor="let comment of comments">
-  <div>
-<span class='movie-key'>{{comment.name}}: </span>
-<span class='movie-value'>{{comment.comment}}</span>
-  </div>
-</ng-container>
-</div>
-
-<form #ctrl='ngForm' (submit)='submitForm(ctrl)'>
-  <div>
-  <input ngModel name='comment' placeholder="Your comments">
-  </div>
-  <div>
-  <input ngModel name='name' placeholder="Your name">
-  </div>
-<input type='submit'>
-</form>
-</div>
+<my-app-movie-details *ngIf="(showMoreDetails | json) != '{}'"
+[movieDetails]="showMoreDetails">
+</my-app-movie-details>
+<my-app-movie-comments *ngIf="(showMoreDetails | json) != '{}'">
+</my-app-movie-comments>

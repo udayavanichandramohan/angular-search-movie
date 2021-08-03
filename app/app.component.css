@@ -13,25 +13,8 @@
 }
 
 .form-control {
-  box-shadow: 0 10px 40px 0 #B0C1D9;
+  box-shadow: 0 10px 40px 0 #72b5b8;
 }
 .form-control::placeholder  {
   font-family: FontAwesome;
-}
-.more-details-container {
-  border:1px solid black;
-  margin:20px;
-}
-.more-details-name{
- margin-bottom:10px;
- font-size: 20px;
-
-}
-.movie-key {
-  color: #BEBEBE;
-
-}
-
-.movie-value {
-
 }

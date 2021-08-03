@@ -11,7 +11,6 @@ export class AppComponent {
   moviesList = [];
   searchText: string;
   showMoreDetails: any = {};
-  comments = [];
   constructor() {
     this.moviesList = getMovies();
   }
@@ -20,20 +19,11 @@ export class AppComponent {
     this.showMoreDetails = movie;
     console.log('bbbbbbbb', movie);
   }
-  get key() {
-    return Object.keys(this.showMoreDetails);
-  }
 
   modelChanged(movie) {
     console.log('EVENT', movie.length);
     if (!movie.length) {
       this.showMoreDetails = {};
     }
-  }
-
-  submitForm(form) {
-    const comment = { comment: form.value.comment, name: form.value.name };
-    this.comments.push(comment);
-    form.resetForm();
   }
 }

@@ -1,0 +1,11 @@
+<div class="more-details-container">
+<div class='more-details-name'>
+  {{movieDetails.Film}}
+</div>
+<div *ngFor="let prop of key">
+  <div>
+    <span class='movie-key'>{{prop}}: </span>
+    <span class='movie-value'>{{movieDetails[prop]}}</span>
+  </div>
+</div>
+</div>

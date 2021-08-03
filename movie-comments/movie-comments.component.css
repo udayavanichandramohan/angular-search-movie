@@ -1,0 +1,32 @@
+.movie-comments {
+  margin:20px;
+  box-shadow: 0 10px 40px 0 #72b5b8;
+  border-radius: 7px;
+  padding:20px;
+}
+.comments-label {
+  margin-bottom:10px;
+ font-size: 20px;
+}
+
+.input-name {
+  margin-top:12px;
+  margin-bottom:12px;
+}
+
+.submit-btn {
+  width:130px;
+  background-color: #72b5b8;
+  padding:6px;
+}
+.comment-name {
+  color: #BEBEBE;
+}
+
+.movie-user-comments {
+  margin:23px
+}
+
+.comments {
+  margin:20px;
+}

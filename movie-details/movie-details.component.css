@@ -1,0 +1,13 @@
+.more-details-container {
+  margin:20px;
+  box-shadow: 0 10px 40px 0 #72b5b8;
+  border-radius: 7px;
+  padding:20px;
+}
+.more-details-name{
+ margin-bottom:10px;
+ font-size: 20px;
+}
+.movie-key {
+  color: #BEBEBE;
+}
