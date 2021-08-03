@@ -18,3 +18,7 @@
 .form-control::placeholder  {
   font-family: FontAwesome;
 }
+
+.movie-link {
+  cursor: pointer;
+}
