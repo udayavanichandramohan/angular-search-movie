@@ -32,4 +32,24 @@
     <span class='movie-value'>{{showMoreDetails[prop]}}</span>
   </div>
 </div> 
+
+<div class="comments" >
+  Comments
+<ng-container *ngFor="let comment of comments">
+  <div>
+<span class='movie-key'>{{comment.name}}: </span>
+<span class='movie-value'>{{comment.comment}}</span>
+  </div>
+</ng-container>
+</div>
+
+<form #ctrl='ngForm' (submit)='submitForm(ctrl)'>
+  <div>
+  <input ngModel name='comment' placeholder="Your comments">
+  </div>
+  <div>
+  <input ngModel name='name' placeholder="Your name">
+  </div>
+<input type='submit'>
+</form>
 </div>
