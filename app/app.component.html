@@ -1,0 +1,30 @@
+<div class="container text-center">
+  <h1>{{title}}</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="search-movie">
+      <input class="form-control" type="text" name="search" 
+      (ngModelChange)="modelChanged($event)"
+      [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442; Search Movie">
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Movie Lists</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movie of moviesList | filter:searchText;">
+          <td (click)="movieClick(movie)">{{movie.Film}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="more-details" *ngIf="(showMoreDetails | json) != '{}'">
+  {{showMoreDetails.Film}}
+  <div *ngFor="let prop of key">
+  <div>{{prop}}: {{showMoreDetails[prop]}}</div>
+</div> 
+</div>
